@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+The application is implemented using react, I chose to do the front-end implementation. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Soon after loading the application in the browser, the user interacts with a wizard form that allows the user to input each phase of setting up his/her startup. 
 
-## Available Scripts
+Each phase has subsequent tasks. A phase can have unlimited tasks.
 
-In the project directory, you can run:
+Empowering users to define the phases and tasks provides them with the ability to precisely articulate and oversee the process of establishing their startup. I implemented this feature with the understanding that startups can vary significantly and possess unique characteristics. Consequently, the method employed to set up one startup may diverge from that used for another, acknowledging the diversity within the startup landscape.
 
-### `npm start`
+The user is redirected to the 'progress page' once he/she clicks on the submit button. The progress page tracks and documents the progress in setting up the startup. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Initially all the phases are locked with the lone exception of the first phase. Once a user completes all the tasks of a phase, the next phase is unlocked. The user completes a task by clicking the checkbox beside the task. unchecking the checkbox of a task reopens that task and locks all the phases that come after that task. This action also reopens all the tasks of the locked phases and all the tasks that follow the reopened task. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Once a user completes all the tasks in all phases he is presented with a random fact from https://uselessfacts.jsph.pl/random.json. 
 
-### `npm test`
+/----------------------------------------------STEPS ON HOW TO RUN THE CODE:----------------------------------------------------/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ 
+1. Clone the Repository:
 
-### `npm run build`
+--Open your terminal or command prompt.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+--Navigate to the directory where you want to store the project.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+--Run the following command to clone the repository: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+	git clone https://github.com/ianemmanuel/startup-app.git
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Use the cd command to navigate into the newly cloned project directory
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Run the following command to install all the required dependencies for the project:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+	npm install
+	
 
-## Learn More
+5. Run the following command to start the React development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+	npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+ 
