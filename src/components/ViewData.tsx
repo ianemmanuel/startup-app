@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Modal from 'react-modal'; // Assuming you're using 'react-modal'
+import Modal from 'react-modal'; 
 
 interface Phase {
   phaseName: string;
@@ -14,7 +14,7 @@ const ViewData: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [randomFact, setRandomFact] = useState('');
 
-  // Define fetchRandomFact outside of useEffect
+  // fetch the random fact
   const fetchRandomFact = async () => {
     const response = await fetch('https://uselessfacts.jsph.pl/random.json');
     const data = await response.json();
@@ -29,9 +29,9 @@ const ViewData: React.FC = () => {
         const storedPhases = JSON.parse(storedData) as Phase[];
         setPhases(storedPhases);
 
-        // Check for completion and open modal only if all phases are done
+         // Checking for completion of tasks and display random fact
         if (storedPhases.every((phase) => phase.isDone)) {
-          fetchRandomFact(); // Fetch fact if needed
+          fetchRandomFact(); 
           setIsModalOpen(true);
         }
       } catch (error) {
@@ -45,7 +45,7 @@ const ViewData: React.FC = () => {
   // UseEffect to trigger fetchRandomFact when modal is opened
   useEffect(() => {
     fetchRandomFact();
-  }, [isModalOpen]); // Fetch fact only when modal is triggered
+  }, [isModalOpen]); 
 
   const handleTaskCheck = (phaseIndex: number, taskIndex: number) => {
     const updatedPhases = [...phases];

@@ -39,13 +39,13 @@ const WizardForm: React.FC = () => {
       return;
     }
 
-    // Filter out empty tasks before saving
+    // Filtering out empty tasks before saving
     const filteredTasks = currentTasks.filter((task) => task.taskName.trim() !== '');
 
     if (filteredTasks.length > 0) {
       const phase: Phase = { phaseName: currentPhase, tasks: filteredTasks };
 
-      // Update phases directly with the filtered tasks
+      // Updating phases directly with the filtered tasks
       setPhases((prevPhases) => {
         const updatedPhases = [...prevPhases];
         updatedPhases[currentPhaseIndex] = phase;
@@ -75,7 +75,7 @@ const WizardForm: React.FC = () => {
   }, [phases]);
 
   const handleSubmit = () => {
-    // Add logic for the final submission using the phases collected
+    //final submission using the phases collected
     if (currentPhase.trim() === '' || currentTasks.every(task => task.taskName.trim() === '')) {
       alert('Please provide phase name and at least one task before submitting.');
       return; // Prevent further execution if conditions aren't met
@@ -88,7 +88,7 @@ const WizardForm: React.FC = () => {
       setPhases((prevPhases) => [...prevPhases, phase]);
     }
 
-    // Store tasks as objects with taskName and isChecked properties
+    // Locally storing tasks as objects with taskName and isChecked properties
     const updatedPhases: Phase[] = phases.map((phase) => ({
       ...phase,
       tasks: phase.tasks.map((task) => ({ taskName: task.taskName, isChecked: false })),
@@ -96,8 +96,8 @@ const WizardForm: React.FC = () => {
 
     localStorage.setItem('wizardData', JSON.stringify(updatedPhases));
 
-    // Redirect to another page
-    window.location.href = '/view-data'; // Replace with the actual URL of your view data page
+    
+    window.location.href = '/view-data'; 
   };
   
   return (
@@ -137,9 +137,7 @@ const WizardForm: React.FC = () => {
           </button>
           <button className="next-button" onClick={handleNext}>Next</button>
         </div>
-        <div className="submit-button">
-          <button className="submit-button" onClick={handleSubmit}>Submit</button>
-        </div>
+        <button className="submit-button" onClick={handleSubmit}>Submit</button>
       </div>
     </div>
   </div>

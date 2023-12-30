@@ -6,7 +6,7 @@ import AppRouter from './AppRouter'; // Import AppRouter
 const App: React.FC = () => {
   return (
     <div className="App">
-      <AppRouter /> {/* Use AppRouter instead of WizardForm */}
+      <AppRouter /> 
     </div>
   );
 };
