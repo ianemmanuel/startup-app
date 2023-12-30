@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+
+/* Base styling for the card container */
+.wizard-form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+/* Card styling with shadow */
+.wizard-form-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Form header styling */
+.wizard-form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* Input fields styling */
+.wizard-form-content input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.wizard-form-content button {
+
+}
+
+/* Sky blue color for 'Add task', 'Previous', and 'Next' buttons */
+.add-task-button,
+.previous-button,
+.next-button {
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+/* Green color for 'Submit' button */
+.submit-button {
+  
+  color: #fff;
+  width: 60%; /* Cover 80% of the card width */
+
+  background: linear-gradient(
+    135deg,
+    #4183d7 0%,
+    #66cc99 100%
+  );
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 80px;
+  color: white;
+  font-weight: 400;
+  font-size: 12pt;
+  margin-top: 10px;
+  justify-content: center; 
+}
+
+/* Position 'Add task' button above navigation buttons */
+.add-task-button {
+  margin-bottom: 10px;
+}
+
+/* Position 'Previous' and 'Next' buttons on the left and right sides */
+.navigation-buttons {
+  display: flex;
+  justify-content: center; 
+  margin-bottom: 12.5px;
+  
+
+}
+
+.view-data-container {
+  display: flex; /* Establish flexbox container for vertical centering */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Align content horizontally */
+   /* Take full viewport height */
+  margin: 0; /* Remove any default margins */
+}
+/* Basic card setup */
+.view-data-card {
+  width: 35%; /* Adjust as needed */
+  margin: 0 auto; /* Center horizontally */
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 20px;
+  text-align: left; /* Center content */
+  margin-top: 10vh; /* 10% margin from top */
+  margin-bottom: 10vh; /* 10% margin from bottom */
+  padding-left: 200px;
+}
+
+/* Header */
+.view-data-header {
+  margin-bottom: 20px;
+}
+
+/* Phase container */
+.phase-container {
+  margin-bottom: 15px;
+  opacity: 0.2; /* Initially translucent */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.phase-container:not(.is-locked) {
+  opacity: 5; /* Opaque for unlocked phases */
+}
+
+/* Phase name */
+.phase-name {
+  font-weight: bold;
+}
+
+/* Task list */
+.task-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.task-item {
+  margin-bottom: 5px;
+  padding-left: 50px;
+}
+
+/* Checkboxes */
+.task-checkbox {
+  border-radius: 50%; /* Make checkboxes circular */
+  width: 20px;
+  height: 20px;
+  appearance: none; /* Remove default checkbox style */
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+.task-checkbox:checked {
+  background-color: rgb(96, 235, 126); /* Fill with sky blue on checked */
+}
+
+.custom-modal {
+  width: 25%;
+  margin: 0 auto;
+  background-color: white; /* Opaque background */
+  opacity: 1; /* Ensure full opacity */
+  /* Other modal styling options */
+}
+
+.custom-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Example padding for content */
+}

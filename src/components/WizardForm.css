@@ -1,0 +1,24 @@
+/* Basic styling */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card shadow */
+.wizard-card {
+  background-color: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Navbar (example) */
+.navbar {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+}
